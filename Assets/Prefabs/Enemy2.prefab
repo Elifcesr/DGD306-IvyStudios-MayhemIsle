@@ -166,7 +166,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 0}
-  playerHealth2: {fileID: 0}
   damage: 2
 --- !u!61 &8981138808438143293
 BoxCollider2D:
@@ -227,4 +226,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   currentHealth: 0
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 3fcf1931c172139449aa0f545c7d39da, type: 3}

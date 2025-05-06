@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 1234415391040186183}
   - component: {fileID: 249499746568119435}
   - component: {fileID: 626198158517878310}
+  - component: {fileID: 3588134342406907142}
+  - component: {fileID: 3327328089734614589}
   m_Layer: 6
   m_Name: Player
   m_TagString: Player
@@ -241,3 +243,43 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   playerHealth: {fileID: 1234415391040186183}
+--- !u!114 &3588134342406907142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541135199857120101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bddbc16701ea3a44ca0bcceeef87e16d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 0
+  emptyHeart: {fileID: 21300000, guid: 7713991ca427f1243ba6d530c123899d, type: 3}
+  fullHeart: {fileID: 21300000, guid: 64e7afe6d0f8df6499f99a32e8356439, type: 3}
+  hearts:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  portraitImage: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 3fcf1931c172139449aa0f545c7d39da, type: 3}
+  enemyHealth: {fileID: 3327328089734614589}
+--- !u!114 &3327328089734614589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541135199857120101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60cef980da45280499d396e6ba1de3b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 3
+  currentHealth: 0
+  portrait: {fileID: 21300000, guid: 45cffbb8a4c6f6f43ab199ae6409c8aa, type: 3}

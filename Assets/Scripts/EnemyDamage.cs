@@ -6,7 +6,6 @@ public class EnemyDamage : MonoBehaviour
 {
     // This lets the EnemyDamage script know where to find the PlayerHealth script in Unity
     public PlayerHealth playerHealth;
-    public PlayerHealth playerHealth2;
     public int damage = 2;
 
     // Start is called before the first frame update
@@ -28,7 +27,6 @@ public class EnemyDamage : MonoBehaviour
         {
             // "talks" to the Player Health script
             playerHealth.TakeDamage(damage);
-            playerHealth2.TakeDamage(damage);
         }
     }
 }
