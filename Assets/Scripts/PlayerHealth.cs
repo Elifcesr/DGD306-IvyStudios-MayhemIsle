@@ -19,8 +19,18 @@ public class PlayerHealth : MonoBehaviour
         health -= amount;
         if(health <= 0)
         {
+            health = 0;
             playerSr.enabled = false;
             playerMovement.enabled = false;
+            playerMovement.stopMovement = true; //stop movement
         }
+    }
+    public void Respawn()
+    {
+        health = maxHealth;
+        playerSr.enabled = true;
+        playerMovement.enabled = true;
+        playerMovement.stopMovement = false; // start movement
+        transform.position = Vector3.zero; 
     }
 }

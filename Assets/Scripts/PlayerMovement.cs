@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb2d;
     private Animator playerAnimator;
 
+    public bool stopMovement = false; //Gamemaneger and Health Control
+
     private void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
@@ -21,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        if (stopMovement) return;
+
         Jump();
         Attack(); // Triggering Sword animation
 
@@ -36,6 +40,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (stopMovement) return;
+
         Movement();
     }
 
