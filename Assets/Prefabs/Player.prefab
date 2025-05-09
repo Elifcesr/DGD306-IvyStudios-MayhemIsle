@@ -267,8 +267,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   portraitImage: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 3fcf1931c172139449aa0f545c7d39da, type: 3}
-  enemyHealth: {fileID: 3327328089734614589}
+  portrait: {fileID: 0}
+  enemyHealth: {fileID: 0}
 --- !u!114 &3327328089734614589
 MonoBehaviour:
   m_ObjectHideFlags: 0
