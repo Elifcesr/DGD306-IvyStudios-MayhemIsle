@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb2d;
     private Animator playerAnimator;
 
-    public bool stopMovement = false; //Gamemaneger and Health Control
+    public bool stopMovement = false; //Gamemanager and Health Control
 
     private void Start()
     {
