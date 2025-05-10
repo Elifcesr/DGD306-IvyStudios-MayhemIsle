@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ead0f3916e2d0044962fb1dd9c648ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLives: 3
-  currentLives: 3
+  maxLives: 100
+  currentLives: 100
   respawnTime: 2
   levelEnding: 0
   isGameOver: 0
