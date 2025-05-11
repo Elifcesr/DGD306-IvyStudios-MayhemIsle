@@ -17,6 +17,10 @@ public class EnemyHealthDisplay : MonoBehaviour
     public Sprite portrait;
 
     public EnemyHealth enemyHealth;
+    public EnemyHealth enemy2Health;
+    public EnemyHealth enemy3Health;
+    public EnemyHealth bossHealth;
+    public EnemyHealth boss2Health;
 
     // Start is called before the first frame update
     void Start()
