@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -27,111 +26,80 @@ public class GameManager : MonoBehaviour
     // The expected duration for the level to end is the default value of 5.
     public float waitForLevelEnd = 5f;
 
-    // Control variable for the pause operation.
-    private bool canPause;
+    // Total number of enemies in the level.
+    public int totalEnemies = 15;
 
-    public List<PlayerMovement> players = new List<PlayerMovement>();
+    // Remaining enemies left to defeat.
+    private int remainingEnemies;
 
     // The GameManager object is called when the scene is first loaded.
+    // Creates a singleton instance.
     private void Awake()
     {
-        // Singleton kur
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        instance = this;
     }
 
+    // Start is called when the game starts.
+    // It retrieves the player's current health from PlayerPrefs, using the default health value if no value is recorded.
     void Start()
     {
-        currentLives = PlayerPrefs.GetInt("CurrentLives", maxLives);
+        currentLives = PlayerPrefs.GetInt("CurrentLives", currentLives);
         Debug.Log("currentLives : " + currentLives);
 
-        canPause = true;
-
-        // Sahnedeki tüm oyuncularý bul
-        GameObject[] playerObjects = GameObject.FindGameObjectsWithTag("Player");
-        foreach (GameObject go in playerObjects)
-        {
-            PlayerMovement pm = go.GetComponent<PlayerMovement>();
-            if (pm != null)
-            {
-                players.Add(pm);
-            }
-        }
+        // Sets the number of remaining enemies.
+        remainingEnemies = totalEnemies;
     }
 
-
-    // Update works in per frame.
-    // When Escape is pressed, the game can be paused or continued.
-    // If the number of enemies is zero, it starts the EndLevelCo Coroutine to finish the level.
+    // Update works every frame.
     void Update()
     {
-        // When the Escape key is pressed, the game can be paused and resumed.
-        if (Input.GetKeyDown(KeyCode.Escape) && canPause)
-        {
-            PauseUnpause();
-        }
-
-       //WaveManager
+        // Pause logic removed completely.
     }
 
     // Kills the player and updates the health count.
     // If there are lives left, the respawn process is carried out; otherwise, the game ends.
-    public void KillPlayer(PlayerMovement player)
+    public void KillPlayer()
     {
         if (currentLives > 0)
         {
             // The spawn code is initiated.
-            StartCoroutine(RespawnCo(player));
+            StartCoroutine(RespawnCo());
             currentLives--;
-
-            //UI manager
         }
         else
         {
             // If there are no lives left, the lives are set to 0.
             currentLives = 0;
-            StopAllPlayers();
-
-            //UI manager
-
-            //UI manager
-
- 
-           //level1 enemywave
-
-            // MusicController
-      
-            // The pause operation is disabled.
-            canPause = false;
+            // The game end code is executed.
+            UIManager.instance.gameOverScreen.SetActive(true);
+            // The GameOver music plays.
+            MusicController.instance.PlayGameOver();
+            // The game is now over.
+            isGameOver = true;
         }
     }
 
     // Coroutine for the respawn process.
     // After waiting for a certain period (respawnTime), it respawns the player.
-    public IEnumerator RespawnCo(PlayerMovement player)
+    public IEnumerator RespawnCo()
     {
         // Waits as long as the respawn period.
         yield return new WaitForSeconds(respawnTime);
-        PlayerHealth health = player.GetComponent<PlayerHealth>();
-        if (health != null)
-        {
-            health.Respawn();
-        }
-        // WaveManager
+
+        // Call your respawn logic here.
+        // Example: Instantiate(playerPrefab, respawnPoint.position, Quaternion.identity);
     }
 
-    //stop all players
-    private void StopAllPlayers()
+    // When a single enemy is killed, this is called to track progress.
+    // If all enemies are defeated, the level ends.
+    public void EnemyKilled()
     {
-        foreach (var player in players)
+        remainingEnemies--;
+
+        if (remainingEnemies <= 0 && !isGameOver)
         {
-            player.stopMovement = true;
+            // Starts the end-level sequence if all enemies are gone.
+            StartCoroutine(EndLevelCo());
         }
     }
 
@@ -139,24 +107,14 @@ public class GameManager : MonoBehaviour
     // It shows the level completion screen and activates the "Continue" and "Main Menu" buttons after a few seconds.
     public IEnumerator EndLevelCo()
     {
-        //UIManager
+        // It activates the level completion screen.
+        UIManager.instance.levelEndScreen.SetActive(true);
 
-        StopAllPlayers();
-        canPause = false;
-
+        // Waits for 1 second.
         yield return new WaitForSeconds(1f);
 
-        // UIManager
-    }
-
-    // The method that allows the game to be paused and resumed.
-    public void PauseUnpause()
-    {
-        //UIManager
-   
-            //  MusicController
-
-            // Pause screen UIManager
- 
+        // It activates the Continue and Main Menu buttons.
+        UIManager.instance.continueButton.gameObject.SetActive(true);
+        UIManager.instance.menuButton.gameObject.SetActive(true);
     }
 }

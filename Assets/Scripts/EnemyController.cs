@@ -88,9 +88,6 @@ public class EnemyController : MonoBehaviour
             // About the enemy's passage
             Debug.Log("can azalacak");
 
-            // Reduces the enemy count by one from WaveManager.
-            WaveManager.instance.enemyAmount--;
-
             // Reduces the player's health by the amount of damage dealt by the enemy.
             GameManager.instance.currentLives -= damageAmount;
 
@@ -102,8 +99,6 @@ public class EnemyController : MonoBehaviour
                 // The game ends, indicates a GameOver state.
                 GameManager.instance.isGameOver = true;
 
-                // Stop
-                WaveManager.instance.canSpawnWaves = false;
             }
 
             // Disables the enemy's collider (no longer collides).
