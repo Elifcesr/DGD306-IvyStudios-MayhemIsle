@@ -28,4 +28,11 @@ public class EnemyHealth : MonoBehaviour
             Destroy(gameObject);  //makes sure the enemy is destroyed if its health reaches 0.
         }
     }
+    void Die()
+    {
+        GameManager.instance.EnemyKilled();
+
+        // Bu objeyi sahneden kaldýr
+        Destroy(gameObject);
+    }
 }

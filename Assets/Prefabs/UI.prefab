@@ -806,10 +806,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverScreen: {fileID: 5281815465506812672}
-  livesText: {fileID: 0}
-  levelEndScreen: {fileID: 0}
-  continueButton: {fileID: 0}
-  menuButton: {fileID: 0}
+  levelEndScreen: {fileID: 51059538806610819}
+  continueButton: {fileID: 3591958500274773757}
+  menuButton: {fileID: 5047146691607096156}
   mainMenuName: MainMenu
   loadSceneName: Level2
 --- !u!1 &3309054606910414002
