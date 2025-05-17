@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -53,7 +53,10 @@ public class GameManager : MonoBehaviour
     // Update works every frame.
     void Update()
     {
-        // Pause logic removed completely.
+            if (UIManager.instance.levelEndScreen.activeSelf && Input.GetKeyDown(KeyCode.Space))
+            {
+                UIManager.instance.LevelSceneLoad();
+            }
     }
 
     // Kills the player and updates the health count.
@@ -104,17 +107,14 @@ public class GameManager : MonoBehaviour
     }
 
     // It initiates the process of ending the level.
-    // It shows the level completion screen and activates the "Continue" and "Main Menu" buttons after a few seconds.
+   
     public IEnumerator EndLevelCo()
     {
-        // It activates the level completion screen.
         UIManager.instance.levelEndScreen.SetActive(true);
 
-        // Waits for 1 second.
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f); // 2 saniye bekle
 
-        // It activates the Continue and Main Menu buttons.
-        UIManager.instance.continueButton.gameObject.SetActive(true);
-        UIManager.instance.menuButton.gameObject.SetActive(true);
+        // Otomatik sahne geçişi yap
+        UIManager.instance.LevelSceneLoad();
     }
 }

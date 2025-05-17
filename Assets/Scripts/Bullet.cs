@@ -10,9 +10,11 @@ public class Bullet : MonoBehaviour
     // Merminin düþmana vereceði hasar miktarý.
     public int bulletDamage = 10;
 
-
+                                         
     void Start()
     {
+        // Mermi sahnede en fazla 3 saniye kalýr, sonra yok edilir.
+        Destroy(gameObject, 1f);
 
     }
 

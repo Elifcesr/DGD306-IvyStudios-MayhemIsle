@@ -50,5 +50,4 @@ MonoBehaviour:
   levelEnding: 0
   isGameOver: 0
   waitForLevelEnd: 5
-  players:
-  - {fileID: 0}
+  totalEnemies: 15

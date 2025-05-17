@@ -9,8 +9,6 @@ public class UIManager : MonoBehaviour
 
     public GameObject gameOverScreen;
     public GameObject levelEndScreen;
-    public Button continueButton;
-    public Button menuButton;
 
     public string mainMenuName = "MainMenu";
     public string loadSceneName;
@@ -19,36 +17,17 @@ public class UIManager : MonoBehaviour
     {
         instance = this;
     }
-    public void Restart()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        Time.timeScale = 1f;
-    }
-
-    public void Exit()
-    {
-        SceneManager.LoadScene(mainMenuName);
-        Time.timeScale = 1f;
-    }
-
-    public void Continue()
-    {
-        // Level yüklemeyi baþlatýr
-        LevelSceneLoad(); 
-    }
-
 
     public void LevelSceneLoad()
     {
-        if (PlayerPrefs.GetString("LevelName") == "Level3")
+        Time.timeScale = 1f;
+
+        if (string.IsNullOrEmpty(loadSceneName))
         {
-            PlayerPrefs.SetString("LevelName", "Level3");
-        }
-        else
-        {
-            PlayerPrefs.SetString("LevelName", loadSceneName);
+            return;
         }
 
+        Debug.Log("Loading scene: " + loadSceneName);
         SceneManager.LoadScene(loadSceneName);
     }
 }
