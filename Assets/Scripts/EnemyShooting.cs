@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyShooting : MonoBehaviour
 {
 
-    public GameObject Enemy3bullet;
+    public GameObject Bullet;
     public Transform bulletPos;
 
     private float timer;
@@ -36,6 +36,6 @@ public class EnemyShooting : MonoBehaviour
 
     void shoot()
     {
-        Instantiate(Enemy3bullet, bulletPos.position, Quaternion.identity);
+        Instantiate(Bullet, bulletPos.position, Quaternion.identity);
     }
 }

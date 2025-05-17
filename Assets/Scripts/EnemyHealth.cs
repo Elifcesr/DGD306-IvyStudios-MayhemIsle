@@ -6,7 +6,6 @@ public class EnemyHealth : MonoBehaviour
 {
     public int maxHealth = 3;
     public int currentHealth;
-    public Sprite portrait; // creates a box to store the enemy's portrait
 
     // Start is called before the first frame update
     void Start()

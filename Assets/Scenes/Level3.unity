@@ -1371,7 +1371,7 @@ PrefabInstance:
       objectReference: {fileID: 5695483955956632348}
     - target: {fileID: 4385960627417933281, guid: 1cba7528b9a516347bf650cf5ce3971b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 193.2461
+      value: 54.4
       objectReference: {fileID: 0}
     - target: {fileID: 4385960627417933281, guid: 1cba7528b9a516347bf650cf5ce3971b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1409,9 +1409,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7901093794131176616, guid: 1cba7528b9a516347bf650cf5ce3971b, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 5695483955956632348}
     - target: {fileID: 8423678274632262378, guid: 1cba7528b9a516347bf650cf5ce3971b, type: 3}
       propertyPath: m_Name
       value: Boss2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8775920386100615843, guid: 1cba7528b9a516347bf650cf5ce3971b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 8775920386100615843, guid: 1cba7528b9a516347bf650cf5ce3971b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 8775920386100615843, guid: 1cba7528b9a516347bf650cf5ce3971b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1426,6 +1442,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 313859154409677188, guid: 4051c5e7961d3b647bbeff611c566c8f, type: 3}
+      propertyPath: Bullet
+      value: 
+      objectReference: {fileID: 2136677923863204374, guid: 9c9041340728ac24c97b9c47577fc8ed, type: 3}
     - target: {fileID: 342612862599483519, guid: 4051c5e7961d3b647bbeff611c566c8f, type: 3}
       propertyPath: m_Name
       value: Enemy3
@@ -1576,6 +1596,6 @@ SceneRoots:
   - {fileID: 4006130032626214045}
   - {fileID: 1984905120}
   - {fileID: 462179762}
+  - {fileID: 3452908902508487615}
   - {fileID: 378360783876454741}
   - {fileID: 1528536766}
-  - {fileID: 3452908902508487615}
