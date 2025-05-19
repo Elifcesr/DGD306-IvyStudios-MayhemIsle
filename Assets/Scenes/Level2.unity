@@ -141,6 +141,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 830391343785810220, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
+      propertyPath: detectionRange
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 830391343785810220, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 101783267}
     - target: {fileID: 1005123691387017259, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: m_Name
       value: Enemy (7)
@@ -394,6 +402,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 830391343785810220, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
+      propertyPath: detectionRange
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 830391343785810220, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 101783267}
     - target: {fileID: 1005123691387017259, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: m_Name
       value: Enemy (3)
@@ -684,6 +700,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 830391343785810220, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
+      propertyPath: detectionRange
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 830391343785810220, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 101783267}
     - target: {fileID: 1005123691387017259, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: m_Name
       value: Enemy (8)
@@ -749,6 +773,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 830391343785810220, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
+      propertyPath: detectionRange
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 830391343785810220, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 101783267}
     - target: {fileID: 1005123691387017259, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: m_Name
       value: Enemy (9)
@@ -991,6 +1023,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 830391343785810220, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
+      propertyPath: detectionRange
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 830391343785810220, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 101783267}
     - target: {fileID: 1005123691387017259, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: m_Name
       value: Enemy (12)
@@ -1056,6 +1096,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 830391343785810220, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
+      propertyPath: detectionRange
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 830391343785810220, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 101783267}
     - target: {fileID: 1005123691387017259, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: m_Name
       value: Enemy (6)
@@ -1132,6 +1180,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 830391343785810220, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
+      propertyPath: detectionRange
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 830391343785810220, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 101783267}
     - target: {fileID: 1005123691387017259, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: m_Name
       value: Enemy (2)
@@ -1197,6 +1253,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 830391343785810220, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
+      propertyPath: detectionRange
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 830391343785810220, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 101783267}
     - target: {fileID: 1005123691387017259, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: m_Name
       value: Enemy (10)
@@ -1319,6 +1383,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 830391343785810220, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
+      propertyPath: detectionRange
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 830391343785810220, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 101783267}
     - target: {fileID: 1005123691387017259, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: m_Name
       value: Enemy (5)
@@ -1384,6 +1456,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 830391343785810220, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
+      propertyPath: detectionRange
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 830391343785810220, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 101783267}
     - target: {fileID: 1005123691387017259, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: m_Name
       value: Enemy
@@ -1607,6 +1687,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 830391343785810220, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
+      propertyPath: detectionRange
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 830391343785810220, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 101783267}
     - target: {fileID: 1005123691387017259, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: m_Name
       value: Enemy (4)
@@ -1672,6 +1760,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 830391343785810220, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
+      propertyPath: detectionRange
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 830391343785810220, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 101783267}
     - target: {fileID: 1005123691387017259, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: m_Name
       value: Enemy (11)
@@ -1740,6 +1836,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7b4b8cf5684b5e42b58c09e448cded3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1992661014 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 626198158517878310, guid: ebc2ce0c95e38824498052c9352ca5d3, type: 3}
+  m_PrefabInstance: {fileID: 497400275}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a925e77f015a194aab398d2b61c7f87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2074792184
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1748,6 +1855,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 830391343785810220, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
+      propertyPath: detectionRange
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 830391343785810220, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 101783267}
     - target: {fileID: 1005123691387017259, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: m_Name
       value: Enemy (1)
@@ -2099,7 +2214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 1, g: 0, b: 0, a: 0.7294118}
+  m_EffectColor: {r: 0.3962264, g: 0.288561, b: 0.13681023, a: 0.7294118}
   m_EffectDistance: {x: 2, y: -2}
   m_UseGraphicAlpha: 1
 --- !u!1 &1309752846949884550
@@ -2690,7 +2805,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &3328974287056643412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2736,14 +2851,14 @@ RectTransform:
   m_GameObject: {fileID: 3309054608419173709}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.65356, y: 0.65356, z: 0.65356}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2241126052608508747}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -958, y: -800}
+  m_AnchoredPosition: {x: 10, y: 43}
   m_SizeDelta: {x: 515, y: 175}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &3499222847802601420
@@ -3312,7 +3427,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!82 &5424749518702393136
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3493,6 +3608,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverScreen: {fileID: 5281815463930682111}
   levelEndScreen: {fileID: 51059537960301180}
+  continueButton: {fileID: 3591958501043271426}
+  menuButton: {fileID: 2110762335969136858}
+  healthDisplay: {fileID: 1992661014}
+  playerHealth: {fileID: 1992661009}
+  mainMenuName: MainMenu
+  loadSceneName: Level3
 --- !u!114 &6400907043837983182
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -60,9 +60,19 @@ public class GameManager : MonoBehaviour
         if (!isGameOver)
         {
             isGameOver = true;
-            SceneManager.LoadScene("GameOver");
+
+            GameObject gameOverUI = GameObject.Find("GameOverScreen");
+            if (gameOverUI != null)
+            {
+                gameOverUI.SetActive(true);
+            }
+            else
+            {
+                Debug.LogWarning("GameOverScreen objesi bulunamadı!");
+            }
         }
     }
+
 
     IEnumerator NextLevelCo()
     {

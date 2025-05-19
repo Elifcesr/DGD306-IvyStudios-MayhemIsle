@@ -1563,6 +1563,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 381f04237a17ebc4fa7b766b88880303, type: 3}
+--- !u!114 &1910323633 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2162715245910454384, guid: 381f04237a17ebc4fa7b766b88880303, type: 3}
+  m_PrefabInstance: {fileID: 1910323632}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a925e77f015a194aab398d2b61c7f87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1919573394
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4009,6 +4020,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverScreen: {fileID: 8177827659759993623}
   levelEndScreen: {fileID: 4072621454030531476}
+  continueButton: {fileID: 713977746677296874}
+  menuButton: {fileID: 7189584383504214576}
+  healthDisplay: {fileID: 1910323633}
+  playerHealth: {fileID: 5695483955956632348}
+  mainMenuName: MainMenu
+  loadSceneName: GameComplete
 --- !u!1 &8177827659759993623
 GameObject:
   m_ObjectHideFlags: 0
