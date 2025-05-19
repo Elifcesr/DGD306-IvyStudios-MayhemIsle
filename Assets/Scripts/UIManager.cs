@@ -1,7 +1,6 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -10,24 +9,37 @@ public class UIManager : MonoBehaviour
     public GameObject gameOverScreen;
     public GameObject levelEndScreen;
 
-    public string mainMenuName = "MainMenu";
-    public string loadSceneName;
-
     private void Awake()
     {
-        instance = this;
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject); 
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
-    public void LevelSceneLoad()
+    public void ShowGameOver()
     {
-        Time.timeScale = 1f;
+        if (gameOverScreen != null)
+            gameOverScreen.SetActive(true);
+    }
 
-        if (string.IsNullOrEmpty(loadSceneName))
-        {
-            return;
-        }
+    public void ShowLevelComplete()
+    {
+        if (levelEndScreen != null)
+            levelEndScreen.SetActive(true);
+    }
 
-        Debug.Log("Loading scene: " + loadSceneName);
-        SceneManager.LoadScene(loadSceneName);
+    public void HideAllScreens()
+    {
+        if (gameOverScreen != null)
+            gameOverScreen.SetActive(false);
+
+        if (levelEndScreen != null)
+            levelEndScreen.SetActive(false);
     }
 }

@@ -10,12 +10,21 @@ public class GameManager : MonoBehaviour
     private int totalEnemies;
     public int currentLives = 10;
 
+    private bool hasRedirected = false; // Sonsuz döngüyü önler.
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject); 
+            DontDestroyOnLoad(gameObject);
+
+            // Eğer oyun MainMenu dışında açıldıysa, otomatik MainMenu sahnesine yönlendirir.
+            string currentScene = SceneManager.GetActiveScene().name;
+            if (currentScene != "MainMenu" && !hasRedirected)
+            {
+                hasRedirected = true;
+                SceneManager.LoadScene("MainMenu");
+            }
         }
         else
         {
@@ -35,7 +44,6 @@ public class GameManager : MonoBehaviour
     {
         totalEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
     }
-
 
     public void EnemyKilled()
     {
@@ -66,13 +74,17 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene("Level1");
         }
-        if (currentScene == "Level2")
+        else if (currentScene == "Level1")
         {
             SceneManager.LoadScene("Level2");
         }
+        else if (currentScene == "Level2")
+        {
+            SceneManager.LoadScene("Level3");
+        }
         else if (currentScene == "Level3")
         {
-            SceneManager.LoadScene("Credits");
+            SceneManager.LoadScene("GameComplete");
         }
         else if (currentScene == "Credits")
         {
