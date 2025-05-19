@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1190253134457416641}
   - component: {fileID: 6191930471225707302}
   - component: {fileID: 313859154409677188}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy3
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -172,7 +172,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -212,7 +212,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
-  portrait: {fileID: 21300000, guid: af7c6543566538b4297ad14f97ade527, type: 3}
 --- !u!114 &313859154409677188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,7 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bb0d5f330faad2489db5ff702837697, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy3bullet: {fileID: 2136677923863204374, guid: 9c9041340728ac24c97b9c47577fc8ed, type: 3}
+  Bullet: {fileID: 2136677923863204374, guid: 9c9041340728ac24c97b9c47577fc8ed, type: 3}
   bulletPos: {fileID: 2527293030198047161}
 --- !u!1 &7420037596375183280
 GameObject:
@@ -236,7 +235,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2527293030198047161}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BulletPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}

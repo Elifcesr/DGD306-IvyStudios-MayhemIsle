@@ -6,9 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public float moveSpeed = 5f;  // Movement speed
-    public float minX = -4f;     // Minimum X limit
-    public float maxX = 4f;      // Maximum X limit
     public GameObject menuObject; // Object to be moved
 
     private void Start()
@@ -24,12 +21,6 @@ public class MainMenu : MonoBehaviour
 
         // Current position of the object
         Vector3 currentPos = menuObject.transform.position;
-
-        // Calculates the new position.
-        currentPos.x += moveX * moveSpeed * Time.deltaTime;
-
-        // Applies X limits.
-        currentPos.x = Mathf.Clamp(currentPos.x, minX, maxX);
 
         // Moves the object to the new position.
         menuObject.transform.position = currentPos;
