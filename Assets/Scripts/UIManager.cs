@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -9,19 +8,18 @@ public class UIManager : MonoBehaviour
 
     [Header("Screens")]
     public GameObject gameOverScreen;
-    public GameObject levelEndScreen;
 
     [Header("Buttons")]
-    public Button continueButton;
-    public Button menuButton;
+    public Button restartButton;
+    public Button mainMenuButton;
 
     [Header("Health")]
     public HealthDisplay healthDisplay; // Kalp UI’sini güncelleyen script
     public PlayerHealth playerHealth;   // Gerçek saðlýk deðerlerinin kaynaðý
 
     [Header("Scene Names")]
-    public string mainMenuName = "MainMenu";
-    public string loadSceneName;
+    public string mainMenuSceneName = "MainMenu";
+    public string firstLevelSceneName = "Level1";
 
     private void Awake()
     {
@@ -34,6 +32,12 @@ public class UIManager : MonoBehaviour
         {
             healthDisplay.playerHealth = playerHealth;
         }
+
+        if (restartButton != null)
+            restartButton.onClick.AddListener(RestartGame);
+
+        if (mainMenuButton != null)
+            mainMenuButton.onClick.AddListener(GoToMainMenu);
     }
 
     public void ShowGameOver()
@@ -42,43 +46,15 @@ public class UIManager : MonoBehaviour
         gameOverScreen.SetActive(true);
     }
 
-    public void ShowLevelEnd()
-    {
-        Time.timeScale = 0f;
-        levelEndScreen.SetActive(true);
-    }
-
-    public void Continue()
+    public void RestartGame()
     {
         Time.timeScale = 1f;
-        gameOverScreen.SetActive(false);
-        levelEndScreen.SetActive(false);
+        SceneManager.LoadScene(firstLevelSceneName);
     }
 
-    public void Restart()
+    public void GoToMainMenu()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
-    public void Exit()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(mainMenuName);
-    }
-
-    public void LevelSceneLoad()
-    {
-        if (PlayerPrefs.GetString("LevelName") == "Level3")
-        {
-            PlayerPrefs.SetString("LevelName", "Level3");
-        }
-        else
-        {
-            PlayerPrefs.SetString("LevelName", loadSceneName);
-        }
-
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(loadSceneName);
+        SceneManager.LoadScene(mainMenuSceneName);
     }
 }

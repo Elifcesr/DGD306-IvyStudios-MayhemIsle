@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,10 +8,18 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
 
     public bool isGameOver = false;
-    private int totalEnemies;
     public int currentLives = 10;
 
-    private bool hasRedirected = false; // Sonsuz döngüyü önler.
+    private int totalEnemies;
+    private bool hasRedirected = false;
+
+    private Dictionary<string, int> levelEnemyCount = new Dictionary<string, int>()
+    {
+        { "Level1", 15 },
+        { "Level2", 4 },
+        { "Level3", 4 }
+    };
+
     private void Awake()
     {
         if (instance == null)
@@ -18,7 +27,6 @@ public class GameManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
 
-            // Eğer oyun MainMenu dışında açıldıysa, otomatik MainMenu sahnesine yönlendirir.
             string currentScene = SceneManager.GetActiveScene().name;
             if (currentScene != "MainMenu" && !hasRedirected)
             {
@@ -42,7 +50,17 @@ public class GameManager : MonoBehaviour
 
     public void CountEnemies()
     {
-        totalEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
+        string currentScene = SceneManager.GetActiveScene().name;
+
+        if (levelEnemyCount.ContainsKey(currentScene))
+        {
+            totalEnemies = levelEnemyCount[currentScene];
+        }
+        else
+        {
+            // Eğer belirtilmemişse sahnedeki düşmanları say.
+            totalEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
+        }
     }
 
     public void EnemyKilled()
@@ -61,18 +79,16 @@ public class GameManager : MonoBehaviour
         {
             isGameOver = true;
 
-            GameObject gameOverUI = GameObject.Find("GameOverScreen");
-            if (gameOverUI != null)
+            if (UIManager.instance != null)
             {
-                gameOverUI.SetActive(true);
+                UIManager.instance.ShowGameOver();
             }
             else
             {
-                Debug.LogWarning("GameOverScreen objesi bulunamadı!");
+                Debug.LogWarning("UIManager instance bulunamadı!");
             }
         }
     }
-
 
     IEnumerator NextLevelCo()
     {
