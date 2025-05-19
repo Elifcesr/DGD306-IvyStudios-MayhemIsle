@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2810561079822075052}
-  - component: {fileID: 7987019371737146682}
+  - component: {fileID: 8685028830860024195}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7987019371737146682
+--- !u!114 &8685028830860024195
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,10 +44,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ead0f3916e2d0044962fb1dd9c648ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxLives: 100
-  currentLives: 100
-  respawnTime: 2
-  levelEnding: 0
+  currentLives: 3
   isGameOver: 0
-  waitForLevelEnd: 5
-  totalEnemies: 15

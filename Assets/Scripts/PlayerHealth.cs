@@ -23,6 +23,7 @@ public class PlayerHealth : MonoBehaviour
             playerSr.enabled = false;
             playerMovement.enabled = false;
             playerMovement.stopMovement = true; //stop movement
+            GameManager.instance.PlayerDied();
         }
     }
     public void Respawn()

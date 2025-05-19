@@ -2,119 +2,87 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// GameManager controls the overall management of the game, including lives, levels, and game state.
 public class GameManager : MonoBehaviour
 {
-    // The Singleton example provides access to the single GameManager object in the game.
     public static GameManager instance;
 
-    // The player's maximum health is set to a default value of 3.
-    public int maxLives = 3;
-
-    // The player's current number of lives has a default value of 3.
-    public int currentLives = 3;
-
-    // The player's respawn time has a default value of 2.
-    public float respawnTime = 2f;
-
-    // Checks whether the level has ended or not.
-    public bool levelEnding;
-
-    // If the game is over, it will be true; as long as it is not over, it will be false.
     public bool isGameOver = false;
+    private int totalEnemies;
+    public int currentLives = 10;
 
-    // The expected duration for the level to end is the default value of 5.
-    public float waitForLevelEnd = 5f;
-
-    // Total number of enemies in the level.
-    public int totalEnemies = 15;
-
-    // Remaining enemies left to defeat.
-    private int remainingEnemies;
-
-    // The GameManager object is called when the scene is first loaded.
-    // Creates a singleton instance.
     private void Awake()
     {
-        instance = this;
-    }
-
-    // Start is called when the game starts.
-    // It retrieves the player's current health from PlayerPrefs, using the default health value if no value is recorded.
-    void Start()
-    {
-        currentLives = PlayerPrefs.GetInt("CurrentLives", currentLives);
-        Debug.Log("currentLives : " + currentLives);
-
-        // Sets the number of remaining enemies.
-        remainingEnemies = totalEnemies;
-    }
-
-    // Update works every frame.
-    void Update()
-    {
-            if (UIManager.instance.levelEndScreen.activeSelf && Input.GetKeyDown(KeyCode.Space))
-            {
-                UIManager.instance.LevelSceneLoad();
-            }
-    }
-
-    // Kills the player and updates the health count.
-    // If there are lives left, the respawn process is carried out; otherwise, the game ends.
-    public void KillPlayer()
-    {
-        if (currentLives > 0)
+        if (instance == null)
         {
-            // The spawn code is initiated.
-            StartCoroutine(RespawnCo());
-            currentLives--;
+            instance = this;
+            DontDestroyOnLoad(gameObject); 
         }
         else
         {
-            // If there are no lives left, the lives are set to 0.
-            currentLives = 0;
-            // The game end code is executed.
-            UIManager.instance.gameOverScreen.SetActive(true);
-            // The GameOver music plays.
-            MusicController.instance.PlayGameOver();
-            // The game is now over.
-            isGameOver = true;
+            Destroy(gameObject);
         }
+
+        SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    // Coroutine for the respawn process.
-    // After waiting for a certain period (respawnTime), it respawns the player.
-    public IEnumerator RespawnCo()
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // Waits as long as the respawn period.
-        yield return new WaitForSeconds(respawnTime);
-
-        // Call your respawn logic here.
-        // Example: Instantiate(playerPrefab, respawnPoint.position, Quaternion.identity);
+        CountEnemies();
+        isGameOver = false;
     }
 
-    // When a single enemy is killed, this is called to track progress.
-    // If all enemies are defeated, the level ends.
+    public void CountEnemies()
+    {
+        totalEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
+    }
+
+
     public void EnemyKilled()
     {
-        remainingEnemies--;
+        totalEnemies--;
 
-        if (remainingEnemies <= 0 && !isGameOver)
+        if (totalEnemies <= 0 && !isGameOver)
         {
-            // Starts the end-level sequence if all enemies are gone.
-            StartCoroutine(EndLevelCo());
+            StartCoroutine(NextLevelCo());
         }
     }
 
-    // It initiates the process of ending the level.
-   
+    public void PlayerDied()
+    {
+        if (!isGameOver)
+        {
+            isGameOver = true;
+            SceneManager.LoadScene("GameOver");
+        }
+    }
+
+    IEnumerator NextLevelCo()
+    {
+        yield return new WaitForSeconds(1f);
+
+        string currentScene = SceneManager.GetActiveScene().name;
+
+        if (currentScene == "MainMenu")
+        {
+            SceneManager.LoadScene("Level1");
+        }
+        if (currentScene == "Level2")
+        {
+            SceneManager.LoadScene("Level2");
+        }
+        else if (currentScene == "Level3")
+        {
+            SceneManager.LoadScene("Credits");
+        }
+        else if (currentScene == "Credits")
+        {
+            SceneManager.LoadScene("GameComplete");
+        }
+    }
+
     public IEnumerator EndLevelCo()
     {
-        UIManager.instance.levelEndScreen.SetActive(true);
-
-        yield return new WaitForSeconds(2f); // 2 saniye bekle
-
-        // Otomatik sahne geçişi yap
-        UIManager.instance.LevelSceneLoad();
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene("GameComplete");
     }
 }

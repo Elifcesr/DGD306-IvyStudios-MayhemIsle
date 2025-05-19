@@ -24,14 +24,13 @@ public class EnemyHealth : MonoBehaviour
         currentHealth -= amount; // enemy's currentHealth goes down by the amount of damage that is dealt.
         if(currentHealth <= 0)
         {
-            Destroy(gameObject);  //makes sure the enemy is destroyed if its health reaches 0.
+            Die();
         }
     }
     void Die()
     {
         GameManager.instance.EnemyKilled();
 
-        // Bu objeyi sahneden kaldýr
         Destroy(gameObject);
     }
 }

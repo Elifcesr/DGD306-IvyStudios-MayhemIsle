@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 1234415391040186183}
   - component: {fileID: 249499746568119435}
   - component: {fileID: 626198158517878310}
-  - component: {fileID: 3588134342406907142}
   - component: {fileID: 3327328089734614589}
   - component: {fileID: 2296710500467918185}
   m_Layer: 6
@@ -205,7 +204,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.26376367, y: 0.054218054}
+  m_Offset: {x: -0.78168726, y: 0.054218054}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -216,7 +215,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.0118623, y: 5.939733}
+  m_Size: {x: 2.976015, y: 5.939733}
   m_EdgeRadius: 0
 --- !u!114 &626198158517878310
 MonoBehaviour:
@@ -246,31 +245,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   playerHealth: {fileID: 1234415391040186183}
---- !u!114 &3588134342406907142
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1541135199857120101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bddbc16701ea3a44ca0bcceeef87e16d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 0
-  maxHealth: 0
-  emptyHeart: {fileID: 21300000, guid: 7713991ca427f1243ba6d530c123899d, type: 3}
-  fullHeart: {fileID: 21300000, guid: 64e7afe6d0f8df6499f99a32e8356439, type: 3}
-  hearts:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  portraitImage: {fileID: 0}
-  portrait: {fileID: 0}
-  enemyHealth: {fileID: 0}
 --- !u!114 &3327328089734614589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,7 +259,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   currentHealth: 0
-  portrait: {fileID: 21300000, guid: 45cffbb8a4c6f6f43ab199ae6409c8aa, type: 3}
 --- !u!114 &2296710500467918185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,7 +276,7 @@ MonoBehaviour:
   enemyMask:
     serializedVersion: 2
     m_Bits: 128
-  attackDamage: 25
+  attackDamage: 2
   cooldownTime: 0.5
 --- !u!1 &3277978089700360467
 GameObject:
