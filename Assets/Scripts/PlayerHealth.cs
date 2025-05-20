@@ -20,21 +20,25 @@ public class PlayerHealth : MonoBehaviour
         {
             if (PlayerPrefs.HasKey("PlayerHealth"))
             {
-                health = PlayerPrefs.GetInt("PlayerHealth");
+                int savedHealth = PlayerPrefs.GetInt("PlayerHealth");
+
+                // Eðer kayýtlý saðlýk deðeri 0 ise, maxHealth ile baþla
+                if (savedHealth <= 0)
+                {
+                    health = maxHealth;
+                }
+                else
+                {
+                    health = savedHealth;
+                }
             }
             else
             {
                 health = maxHealth;
             }
 
-            // Güncel saðlýk deðerini kaydet
             PlayerPrefs.SetInt("PlayerHealth", health);
             PlayerPrefs.Save();
-        }
-        else
-        {
-            // Level3'te saðlýðý her zaman full baþlat
-            health = maxHealth;
         }
     }
 
