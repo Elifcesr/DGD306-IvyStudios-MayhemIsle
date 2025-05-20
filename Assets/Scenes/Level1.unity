@@ -631,7 +631,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8607884519296828324, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: damage
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8607884519296828324, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: playerHealth

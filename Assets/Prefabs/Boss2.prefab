@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 0}
-  damage: 4
+  damage: 5
 --- !u!50 &695062783806110175
 Rigidbody2D:
   serializedVersion: 4

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8607884519296828324}
   - component: {fileID: 8883497360115516577}
   - component: {fileID: 830391343785810220}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 0}
-  damage: 1
+  damage: 3
 --- !u!114 &8883497360115516577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,7 +229,7 @@ MonoBehaviour:
   changeDirectionXPoint: -2
   maxHealth: 10
   currentHealth: 10
-  damageAmount: 20
+  damageAmount: 3
   changedDirection: {x: -0.5, y: -0.5}
   playerTransform: {fileID: 0}
-  detectionRange: 5
+  detectionRange: 100

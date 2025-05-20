@@ -8,7 +8,7 @@ public class PlayerMelee : MonoBehaviour
     public float attackRadius = 1f;
     public LayerMask enemyMask;
 
-    public int attackDamage = 25;
+    public int attackDamage = 4;
 
     public float cooldownTime = .5f;
     private float cooldownTimer = 0f;
