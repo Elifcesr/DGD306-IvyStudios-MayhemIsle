@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -12,27 +13,36 @@ public class PlayerHealth : MonoBehaviour
 
     void Start()
     {
-        // Her zaman saðlýk maxHealth olarak baþlasýn
-        health = maxHealth;
+        string currentScene = SceneManager.GetActiveScene().name;
 
-        // Eðer önceden kaydedilmiþ bir saðlýk varsa ve oyun devam ediyorsa onu yükle
-        if (PlayerPrefs.HasKey("PlayerHealth"))
+        // Eðer Level3 deðilse, önceki saðlýk deðerini yükle
+        if (currentScene != "Level3")
         {
-            health = PlayerPrefs.GetInt("PlayerHealth");
+            if (PlayerPrefs.HasKey("PlayerHealth"))
+            {
+                health = PlayerPrefs.GetInt("PlayerHealth");
+            }
+            else
+            {
+                health = maxHealth;
+            }
+
+            // Güncel saðlýk deðerini kaydet
+            PlayerPrefs.SetInt("PlayerHealth", health);
+            PlayerPrefs.Save();
         }
-
-        // Güncel saðlýk deðeri kaydedilsin
-        PlayerPrefs.SetInt("PlayerHealth", health);
-        PlayerPrefs.Save();
+        else
+        {
+            // Level3'te saðlýðý her zaman full baþlat
+            health = maxHealth;
+        }
     }
-
 
     public void TakeDamage(int amount)
     {
         health -= amount;
         health = Mathf.Clamp(health, 0, maxHealth);
 
-        // Saðlýk sýfýra düþtüyse ölüm iþlemleri
         if (health <= 0)
         {
             playerSr.enabled = false;
@@ -41,8 +51,11 @@ public class PlayerHealth : MonoBehaviour
             GameManager.instance.PlayerDied();
         }
 
-        // Güncel caný kaydet
-        PlayerPrefs.SetInt("PlayerHealth", health);
-        PlayerPrefs.Save();
+        // Sadece Level3 dýþýnda can kaydet
+        if (SceneManager.GetActiveScene().name != "Level3")
+        {
+            PlayerPrefs.SetInt("PlayerHealth", health);
+            PlayerPrefs.Save();
+        }
     }
 }
