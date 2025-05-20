@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     private int totalEnemies;
     private bool hasRedirected = false;
 
+
     private Dictionary<string, int> levelEnemyCount = new Dictionary<string, int>()
     {
         { "Level1", 1 },
@@ -53,17 +54,8 @@ public class GameManager : MonoBehaviour
 
     public void CountEnemies()
     {
-        string currentScene = SceneManager.GetActiveScene().name;
-
-        if (levelEnemyCount.ContainsKey(currentScene))
-        {
-            totalEnemies = levelEnemyCount[currentScene];
-        }
-        else
-        {
-            // Eğer belirtilmemişse sahnedeki düşmanları say.
-            totalEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
-        }
+        totalEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
+        Debug.Log("Level başında düşman sayısı: " + totalEnemies);
     }
 
     public void EnemyKilled()
@@ -115,10 +107,6 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene("GameComplete");
         }
-        else if (currentScene == "Credits")
-        {
-            SceneManager.LoadScene("GameComplete");
-        }
     }
 
     public IEnumerator EndLevelCo()
@@ -127,5 +115,4 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("GameComplete");
     }
 }
-
 

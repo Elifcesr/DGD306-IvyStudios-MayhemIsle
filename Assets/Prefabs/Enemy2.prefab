@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 0}
-  damage: 2
+  damage: 3
 --- !u!61 &8981138808438143293
 BoxCollider2D:
   m_ObjectHideFlags: 0

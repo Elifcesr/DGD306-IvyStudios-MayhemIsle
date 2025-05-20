@@ -31,26 +31,18 @@ public class Bullet : MonoBehaviour
     {
         if (other.tag == "Enemy")
         {
-            // Mermiyi sahneden yok eder.
+            // Mermiyi yok et
             Destroy(gameObject);
 
-            // Eðer düþmanýn caný 10'dan fazlaysa, hasar uygulanýr.
-            if (other.GetComponent<EnemyHealth>().currentHealth > 10)
+            // EnemyHealth bileþenini al
+            EnemyHealth enemyHealth = other.GetComponent<EnemyHealth>();
+            if (enemyHealth != null)
             {
-                // Düþmanýn canýný bulletDamage kadar azaltýr.
-                other.GetComponent<EnemyHealth>().currentHealth -= bulletDamage;
-            }
-            // Eðer düþmanýn caný 10 veya daha azsa, ölüm iþlemleri baþlatýlýr.
-            else if (other.GetComponent<EnemyHealth>().currentHealth <= 10)
-            {
-                // Düþmanýn çarpýþmasýný devre dýþý býrakýr, baþka nesnelerle etkileþime girmez.
-                other.GetComponent<BoxCollider2D>().enabled = false;
-
-                // Düþman nesnesini sahneden 0.4 saniye sonra kaldýrýr. 
-                Destroy(other.gameObject, .4f);
+                enemyHealth.TakeDamage(bulletDamage);
             }
         }
     }
+
 
     private void OnBecameInvisible()
     {
