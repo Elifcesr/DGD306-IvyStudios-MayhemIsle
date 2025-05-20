@@ -1321,8 +1321,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a925e77f015a194aab398d2b61c7f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  maxHealth: 100
   emptyHeart: {fileID: 21300000, guid: 7713991ca427f1243ba6d530c123899d, type: 3}
   fullHeart: {fileID: 21300000, guid: 64e7afe6d0f8df6499f99a32e8356439, type: 3}
   hearts:
@@ -2138,8 +2136,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7b4b8cf5684b5e42b58c09e448cded3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  maxHealth: 100
+  health: 10
+  maxHealth: 10
   playerSr: {fileID: 4677240048735916232}
   playerMovement: {fileID: 532096473489577633}
 --- !u!114 &5827179170274686374

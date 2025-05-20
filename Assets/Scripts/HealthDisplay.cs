@@ -1,35 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class HealthDisplay : MonoBehaviour
 {
-    public int health;
-    public int maxHealth;
-
-    //creates a box in Unity to store our empty and full heart sprites 
     public Sprite emptyHeart;
     public Sprite fullHeart;
-    public UnityEngine.UI.Image[] hearts;
+    public Image[] hearts;
 
     public PlayerHealth playerHealth;
 
-    // Start is called before the first frame update
     void Start()
     {
-
+        if (playerHealth == null)
+        {
+            playerHealth = FindObjectOfType<PlayerHealth>();
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        health = playerHealth.health;
-        maxHealth = playerHealth.maxHealth;
+        int currentHealth = playerHealth.health;
+        int maxHealth = playerHealth.maxHealth;
 
         for (int i = 0; i < hearts.Length; i++)
         {
-            if (i < health)
+            if (i < currentHealth)
             {
                 hearts[i].sprite = fullHeart;
             }
@@ -37,14 +34,8 @@ public class HealthDisplay : MonoBehaviour
             {
                 hearts[i].sprite = emptyHeart;
             }
-            if (i < maxHealth)
-            {
-                hearts[i].enabled = true;
-            }
-            else
-            {
-                hearts[i].enabled = false;
-            }
+
+            hearts[i].enabled = i < maxHealth;
         }
     }
 }
