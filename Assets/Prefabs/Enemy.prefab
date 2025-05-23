@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 0}
-  damage: 3
+  damage: 1
 --- !u!114 &8883497360115516577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,4 +232,4 @@ MonoBehaviour:
   damageAmount: 3
   changedDirection: {x: -0.5, y: -0.5}
   playerTransform: {fileID: 0}
-  detectionRange: 100
+  detectionRange: 35
