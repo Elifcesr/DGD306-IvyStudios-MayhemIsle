@@ -4341,7 +4341,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6235878019123103061, guid: 2765c4a079c797349969f378fcb88269, type: 3}
       propertyPath: m_Name
-      value: Canvas
+      value: Healthbar
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4600,6 +4600,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6068401177727960486, guid: ebc2ce0c95e38824498052c9352ca5d3, type: 3}
+      propertyPath: fullHeart
+      value: 
+      objectReference: {fileID: 21300000, guid: 6558b18ecfa50eb4d9da739bd2a0f0f5, type: 3}
+    - target: {fileID: 6068401177727960486, guid: ebc2ce0c95e38824498052c9352ca5d3, type: 3}
+      propertyPath: emptyHeart
+      value: 
+      objectReference: {fileID: 21300000, guid: 990a847843bd73149b69f0aede928d08, type: 3}
     - target: {fileID: 6068401177727960486, guid: ebc2ce0c95e38824498052c9352ca5d3, type: 3}
       propertyPath: hearts.Array.data[0]
       value: 
