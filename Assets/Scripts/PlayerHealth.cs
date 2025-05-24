@@ -15,14 +15,12 @@ public class PlayerHealth : MonoBehaviour
     {
         string currentScene = SceneManager.GetActiveScene().name;
 
-        // Eðer Level3 deðilse, önceki saðlýk deðerini yükle
         if (currentScene != "Level3")
         {
             if (PlayerPrefs.HasKey("PlayerHealth"))
             {
                 int savedHealth = PlayerPrefs.GetInt("PlayerHealth");
 
-                // Eðer kayýtlý saðlýk deðeri 0 ise, maxHealth ile baþla
                 if (savedHealth <= 0)
                 {
                     health = maxHealth;
@@ -55,7 +53,7 @@ public class PlayerHealth : MonoBehaviour
             GameManager.instance.PlayerDied();
         }
 
-        // Sadece Level3 dýþýnda can kaydet
+      
         if (SceneManager.GetActiveScene().name != "Level3")
         {
             PlayerPrefs.SetInt("PlayerHealth", health);

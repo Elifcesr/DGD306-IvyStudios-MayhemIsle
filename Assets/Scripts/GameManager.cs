@@ -14,13 +14,6 @@ public class GameManager : MonoBehaviour
     private bool hasRedirected = false;
 
 
-    private Dictionary<string, int> levelEnemyCount = new Dictionary<string, int>()
-    {
-        { "Level1", 1 },
-        { "Level2", 2 },
-        { "Level3", 3 }
-    };
-
     private void Awake()
     {
         if (instance == null)
@@ -30,7 +23,7 @@ public class GameManager : MonoBehaviour
 
             string currentScene = SceneManager.GetActiveScene().name;
 
-            // Sadece oyun seviyelerinden birindeysek MainMenu'ya yönlendir.
+   
             if ((currentScene == "Level1" || currentScene == "Level2" || currentScene == "Level3") && !hasRedirected)
             {
                 hasRedirected = true;
@@ -115,4 +108,3 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("GameComplete");
     }
 }
-

@@ -4,37 +4,34 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    // Oyunda merminin saniyede kaç birim gideceðini belirtir. 
     public float shotSpeed = 7f;
 
-    // Merminin düþmana vereceði hasar miktarý.
+    // The amount of damage the bullet will deal to the enemy.
     public int bulletDamage = 10;
 
-                                         
     void Start()
     {
-        // Mermi sahnede en fazla 3 saniye kalýr, sonra yok edilir.
+        // The bullet will be destroyed after 1 second in the scene.
         Destroy(gameObject, 1f);
-
     }
 
-    // Merminin sürekli saða doðru hareket etmesi saðlanýr.
+    // Ensures the bullet moves to the right.
     private void Update()
     {
-        // Merminin x ekseninde shotSpeed hýzýnda ilerlemesini saðlar.
-        // Time.deltaTime kullanýmý, kare hýzýndan baðýmsýz hareket saðlar.
+        // Moves the bullet along the x-axis at the rate of shotSpeed.
+        // Time.deltaTime ensures movement is frame-rate independent.
         transform.position += new Vector3(shotSpeed * Time.deltaTime, 0f, 0f);
     }
 
-    // Baþka bir nesne ile çarpýþma gerçekleþtiðinde tetiklenir.
+    // Triggered when the bullet collides with another object.
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Enemy")
         {
-            // Mermiyi yok et
+            // Destroy the bullet.
             Destroy(gameObject);
 
-            // EnemyHealth bileþenini al
+            // Get the EnemyHealth component.
             EnemyHealth enemyHealth = other.GetComponent<EnemyHealth>();
             if (enemyHealth != null)
             {
@@ -43,10 +40,9 @@ public class Bullet : MonoBehaviour
         }
     }
 
-
     private void OnBecameInvisible()
     {
-        // Mermiyi sahneden kaldýrýr.
+        // Removes the bullet from the scene when it becomes invisible.
         Destroy(gameObject);
     }
 }

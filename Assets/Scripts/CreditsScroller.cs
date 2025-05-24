@@ -21,8 +21,7 @@ public class CreditsScroller : MonoBehaviour
     void Update()
     {
         // Updates the position of the object to which the 'rectTransform' component is attached.
-        // scrollSpeed ​​determines the scrolling speed and scrolls independently of the frame with Time.deltaTime.
-        // It moves only on the Y axis, so the X value of Vector2 is set to zero.
+        // scrollSpeed ​​determines the scrolling speed.
         rectTransform.anchoredPosition += new Vector2(0, scrollSpeed * Time.deltaTime);
     }
 }

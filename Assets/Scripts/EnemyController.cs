@@ -11,8 +11,8 @@ public class EnemyController : MonoBehaviour
     public int damageAmount;
     public Vector2 changedDirection;
 
-    public Transform playerTransform; // ← Oyuncunun Transform'u
-    public float detectionRange = 5f; // ← Düşmanın oyuncuyu algılayacağı mesafe
+    public Transform playerTransform; 
+    public float detectionRange = 5f; // The distance at which the enemy will detect the player
 
     void Update()
     {
@@ -22,13 +22,13 @@ public class EnemyController : MonoBehaviour
             return;
         }
 
-        if (playerTransform == null) return; // Oyuncu atanmamışsa devam etme
+        if (playerTransform == null) return; //If the player is not assigned, will not continue
 
         float distanceToPlayer = Vector2.Distance(transform.position, playerTransform.position);
 
         if (distanceToPlayer <= detectionRange)
         {
-            // Oyuncu algılama mesafesinde → hareket et
+
             if (!shouldChangeDirection)
             {
                 transform.position += new Vector3(startDirection.x * moveSpeed * Time.deltaTime,
@@ -48,6 +48,5 @@ public class EnemyController : MonoBehaviour
                 }
             }
         }
-        // Eğer oyuncu çok uzaktaysa → düşman durur (hiçbir hareket yapılmaz)
     }
 }

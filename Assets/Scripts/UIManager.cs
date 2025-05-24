@@ -14,8 +14,8 @@ public class UIManager : MonoBehaviour
     public Button mainMenuButton;
 
     [Header("Health")]
-    public HealthDisplay healthDisplay; // Kalp UI’sini güncelleyen script
-    public PlayerHealth playerHealth;   // Gerçek saðlýk deðerlerinin kaynaðý
+    public HealthDisplay healthDisplay; 
+    public PlayerHealth playerHealth;   
 
     [Header("Scene Names")]
     public string mainMenuSceneName = "MainMenu";
