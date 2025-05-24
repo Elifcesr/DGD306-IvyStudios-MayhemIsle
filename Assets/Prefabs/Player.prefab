@@ -228,8 +228,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a925e77f015a194aab398d2b61c7f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  emptyHeart: {fileID: 21300000, guid: 7713991ca427f1243ba6d530c123899d, type: 3}
-  fullHeart: {fileID: 21300000, guid: 64e7afe6d0f8df6499f99a32e8356439, type: 3}
+  emptyHeart: {fileID: 21300000, guid: 990a847843bd73149b69f0aede928d08, type: 3}
+  fullHeart: {fileID: 21300000, guid: 6558b18ecfa50eb4d9da739bd2a0f0f5, type: 3}
   hearts:
   - {fileID: 0}
   - {fileID: 0}
