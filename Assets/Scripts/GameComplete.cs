@@ -15,8 +15,7 @@ public class GameComplete : MonoBehaviour
     // Name of the main menu scene (used when switching to another scene).
     public string mainMenuName = "MainMenu";
 
-    // Messages to display (Text components)
-    public Text message, pressKey;
+    public Text pressKey;
 
     // Start is called once before the first frame.
     void Start()
@@ -41,9 +40,6 @@ public class GameComplete : MonoBehaviour
     {
         // It waits for the first message to be displayed.
         yield return new WaitForSeconds(timeBetweenTexts);
-
-        // Activates the first message.
-        message.gameObject.SetActive(true);
 
         // It waits again for the second message to be displayed.
         yield return new WaitForSeconds(timeBetweenTexts);

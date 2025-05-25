@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 6
-  jumpSpeed: 11
+  jumpSpeed: 12
   stopMovement: 0
 --- !u!95 &4897623989462775727
 Animator:
