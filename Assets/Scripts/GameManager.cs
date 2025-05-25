@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
     private int totalEnemies;
     private bool hasRedirected = false;
 
-
     private void Awake()
     {
         if (instance == null)
@@ -23,8 +22,13 @@ public class GameManager : MonoBehaviour
 
             string currentScene = SceneManager.GetActiveScene().name;
 
-   
-            if ((currentScene == "Level1" || currentScene == "Level2" || currentScene == "Level3") && !hasRedirected)
+            // Eğer sahne "Cinematic" ise ve henüz yönlendirme yapılmadıysa
+            if (currentScene == "Cinematic" && !hasRedirected)
+            {
+                hasRedirected = true;
+                StartCoroutine(LoadMainMenuAfterCinematic());
+            }
+            else if ((currentScene == "Level1" || currentScene == "Level2" || currentScene == "Level3") && !hasRedirected)
             {
                 hasRedirected = true;
                 SceneManager.LoadScene("MainMenu");
@@ -38,6 +42,11 @@ public class GameManager : MonoBehaviour
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
+    private IEnumerator LoadMainMenuAfterCinematic()
+    {
+        yield return new WaitForSeconds(11f); // Cinematic sahnesi süresi
+        SceneManager.LoadScene("MainMenu");
+    }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
@@ -48,7 +57,6 @@ public class GameManager : MonoBehaviour
     public void CountEnemies()
     {
         totalEnemies = GameObject.FindGameObjectsWithTag("Enemy").Length;
-        Debug.Log("Level başında düşman sayısı: " + totalEnemies);
     }
 
     public void EnemyKilled()
@@ -73,7 +81,7 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                Debug.LogWarning("UIManager instance bulunamadı!");
+
             }
         }
     }
