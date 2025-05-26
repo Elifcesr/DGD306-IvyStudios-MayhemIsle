@@ -13,12 +13,19 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb2d;
     private Animator playerAnimator;
 
-    public bool stopMovement = false; //Gamemanager and Health Control
+    public bool stopMovement = false; // GameManager and Health Control
+
+    public AudioClip walkSound;
+    public AudioClip jumpSound;
+    private AudioSource audioSource;
+
+    private bool isWalkingSoundPlaying = false;
 
     private void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -27,6 +34,8 @@ public class PlayerMovement : MonoBehaviour
 
         Jump();
         Attack(); // Triggering Sword animation
+
+        HandleWalkSound();
 
         if (horizontalMovement > 0 && !isFacingRight)
         {
@@ -58,19 +67,39 @@ public class PlayerMovement : MonoBehaviour
         {
             isGrounded = false;
             rb2d.velocity = Vector2.up * jumpSpeed;
+
+            // play jump sound
+            if (jumpSound != null && audioSource != null)
+            {
+                audioSource.PlayOneShot(jumpSound);
+            }
         }
 
-        if (!isGrounded)
+        playerAnimator.SetBool("isJumping", !isGrounded);
+    }
+
+    private void HandleWalkSound()
+    {
+        if (Mathf.Abs(horizontalMovement) > 0.1f && isGrounded)
         {
-            playerAnimator.SetBool("isJumping", true);
+            if (!isWalkingSoundPlaying && walkSound != null)
+            {
+                audioSource.clip = walkSound;
+                audioSource.loop = true;
+                audioSource.Play();
+                isWalkingSoundPlaying = true;
+            }
         }
         else
         {
-            playerAnimator.SetBool("isJumping", false);
+            if (isWalkingSoundPlaying)
+            {
+                audioSource.Stop();
+                isWalkingSoundPlaying = false;
+            }
         }
     }
 
-    // Triggering Sword animation
     private void Attack()
     {
         if (Input.GetMouseButtonDown(0)) // left click

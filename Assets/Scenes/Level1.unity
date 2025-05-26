@@ -3699,6 +3699,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8297795393315265345, guid: ebc2ce0c95e38824498052c9352ca5d3, type: 3}
+      propertyPath: m_Volume
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 882275551067512929, guid: ebc2ce0c95e38824498052c9352ca5d3, type: 3}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 624f0f230526bbc4297090ae52cda34c, type: 3}
+    - target: {fileID: 882275551067512929, guid: ebc2ce0c95e38824498052c9352ca5d3, type: 3}
+      propertyPath: walkSound
+      value: 
+      objectReference: {fileID: 8300000, guid: fa9b3519b8fbb004e80c0ab7625d6d1a, type: 3}
     - target: {fileID: 996153408634211346, guid: ebc2ce0c95e38824498052c9352ca5d3, type: 3}
       propertyPath: m_Name
       value: Player

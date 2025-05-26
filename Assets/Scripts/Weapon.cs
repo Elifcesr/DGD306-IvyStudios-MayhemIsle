@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.TextCore.Text;
 
 public class Weapon : MonoBehaviour
 {
@@ -12,6 +10,10 @@ public class Weapon : MonoBehaviour
     // Bullet prefab to be created when fired
     public GameObject bulletPrefab;
 
+    // Sound to be played when shooting
+    public AudioClip shootSound;
+    private AudioSource audioSource;
+
     // Reference to the player movement script (PlayerMovement).
     private PlayerMovement playerMovement;
 
@@ -19,8 +21,10 @@ public class Weapon : MonoBehaviour
     {
         // PlayerMovement script
         playerMovement = GetComponentInParent<PlayerMovement>(); // If the weapon is bound to the player character
-    }
 
+        // Get AudioSource component
+        audioSource = GetComponent<AudioSource>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -36,5 +40,11 @@ public class Weapon : MonoBehaviour
     {
         // Creates a new bullet and places it in the scene with the firePoint's position and rotation
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+
+        // Play shoot sound
+        if (shootSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(shootSound);
+        }
     }
 }
