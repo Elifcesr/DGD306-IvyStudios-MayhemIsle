@@ -4,26 +4,28 @@ using UnityEngine;
 
 public class EnemyShooting : MonoBehaviour
 {
-
     public GameObject Bullet;
     public Transform bulletPos;
 
     private float timer;
     private GameObject player;
-    // Start is called before the first frame update
+
+    // sound
+    public AudioClip shootSound;
+    private AudioSource audioSource;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+
+        audioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-
         float distance = Vector2.Distance(transform.position, player.transform.position);
-        Debug.Log(distance);
 
-        if(distance < 30)
+        if (distance < 30)
         {
             timer += Time.deltaTime;
             if (timer > 2)
@@ -37,5 +39,11 @@ public class EnemyShooting : MonoBehaviour
     void shoot()
     {
         Instantiate(Bullet, bulletPos.position, Quaternion.identity);
+
+    
+        if (shootSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(shootSound);
+        }
     }
 }

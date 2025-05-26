@@ -11,8 +11,18 @@ public class EnemyController : MonoBehaviour
     public int damageAmount;
     public Vector2 changedDirection;
 
-    public Transform playerTransform; 
-    public float detectionRange = 5f; // The distance at which the enemy will detect the player
+    public Transform playerTransform;
+    public float detectionRange = 5f;
+
+    // sound
+    public AudioClip hissSound;
+    private AudioSource audioSource;
+    private bool hasHissed = false; 
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     void Update()
     {
@@ -22,13 +32,20 @@ public class EnemyController : MonoBehaviour
             return;
         }
 
-        if (playerTransform == null) return; //If the player is not assigned, will not continue
+        if (playerTransform == null) return;
 
         float distanceToPlayer = Vector2.Distance(transform.position, playerTransform.position);
 
+        //Hiss 
+        if (!hasHissed && distanceToPlayer <= detectionRange)
+        {
+            audioSource.PlayOneShot(hissSound);
+            hasHissed = true;
+            Invoke(nameof(ResetHiss), 5f);
+        }
+
         if (distanceToPlayer <= detectionRange)
         {
-
             if (!shouldChangeDirection)
             {
                 transform.position += new Vector3(startDirection.x * moveSpeed * Time.deltaTime,
@@ -48,5 +65,9 @@ public class EnemyController : MonoBehaviour
                 }
             }
         }
+    }
+    void ResetHiss()
+    {
+        hasHissed = false;
     }
 }

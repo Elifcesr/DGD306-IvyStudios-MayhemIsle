@@ -1,6 +1,6 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+
 public class BatMovement : MonoBehaviour
 {
     public Vector3 pointA;
@@ -9,9 +9,22 @@ public class BatMovement : MonoBehaviour
 
     private SpriteRenderer spriteRenderer;
 
+    // 🔊 SES
+    public AudioClip flapSound;
+    private AudioSource audioSource;
+
+    public float flapInterval = 1.5f; // Frequency of sound playback
+
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        // Ses sistemi
+        audioSource = GetComponent<AudioSource>();
+        if (flapSound != null && audioSource != null)
+        {
+            StartCoroutine(FlapSoundRoutine());
+        }
     }
 
     void Update()
@@ -20,12 +33,17 @@ public class BatMovement : MonoBehaviour
         Vector3 newPos = Vector3.Lerp(pointA, pointB, t);
         transform.position = newPos;
 
-        // Going towards B (moving forward) → back turned
-        // Going towards A (turning back) → face turned
-
         bool goingToA = Mathf.PingPong(Time.time * speed, 2f) > 1f;
-
-        // Face/back direction: face when facing A, back when facing B
         spriteRenderer.flipX = !goingToA;
+    }
+
+    // flap sound
+    IEnumerator FlapSoundRoutine()
+    {
+        while (true)
+        {
+            audioSource.PlayOneShot(flapSound);
+            yield return new WaitForSeconds(flapInterval);
+        }
     }
 }

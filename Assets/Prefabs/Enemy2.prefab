@@ -151,9 +151,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b03705554bd3f8c4c87753d263757f6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointA: {x: 138, y: 0.9, z: 0}
+  pointA: {x: 144, y: 0.8, z: 0}
   pointB: {x: 170, y: 2, z: 0}
   speed: 0.2
+  flapSound: {fileID: 8300000, guid: 55bf7e75150379b468653162a7eef33b, type: 3}
+  flapInterval: 1.5
 --- !u!114 &226872456362815529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,7 +240,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 55bf7e75150379b468653162a7eef33b, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8607884519296828324}
   - component: {fileID: 8883497360115516577}
   - component: {fileID: 830391343785810220}
-  - component: {fileID: -5591395190789424564}
+  - component: {fileID: 665421497052812949}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Enemy
@@ -234,7 +234,8 @@ MonoBehaviour:
   changedDirection: {x: -0.5, y: -0.5}
   playerTransform: {fileID: 0}
   detectionRange: 35
---- !u!82 &-5591395190789424564
+  hissSound: {fileID: 8300000, guid: a6350e1bcfe62834281769a3596ccf9e, type: 3}
+--- !u!82 &665421497052812949
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -244,11 +245,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f1ef7c8c6882784b85318ba29dd9cec, type: 3}
+  m_audioClip: {fileID: 8300000, guid: a6350e1bcfe62834281769a3596ccf9e, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.465
+  m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
