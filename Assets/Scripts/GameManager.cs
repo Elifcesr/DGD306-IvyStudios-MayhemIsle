@@ -22,7 +22,6 @@ public class GameManager : MonoBehaviour
 
             string currentScene = SceneManager.GetActiveScene().name;
 
-            // Eğer sahne "Cinematic" ise ve henüz yönlendirme yapılmadıysa
             if (currentScene == "Cinematic" && !hasRedirected)
             {
                 hasRedirected = true;
@@ -44,7 +43,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator LoadMainMenuAfterCinematic()
     {
-        yield return new WaitForSeconds(11f); // Cinematic sahnesi süresi
+        yield return new WaitForSeconds(12f); // Cinematic scene duration
         SceneManager.LoadScene("MainMenu");
     }
 
@@ -84,6 +83,7 @@ public class GameManager : MonoBehaviour
 
             }
         }
+
     }
 
     IEnumerator NextLevelCo()

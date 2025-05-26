@@ -353,7 +353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd29e3e0541e55b4c84ee5bb211f0b28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  videoPlayer: {fileID: 0}
+  videoPlayer: {fileID: 1921997655}
   nextSceneName: MainMenu
 --- !u!82 &1921997658
 AudioSource:

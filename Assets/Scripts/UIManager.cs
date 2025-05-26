@@ -44,6 +44,11 @@ public class UIManager : MonoBehaviour
     {
         Time.timeScale = 0f;
         gameOverScreen.SetActive(true);
+
+        if (MusicController.instance != null)
+        {
+            MusicController.instance.PlayGameOver();
+        }
     }
 
     public void RestartGame()
