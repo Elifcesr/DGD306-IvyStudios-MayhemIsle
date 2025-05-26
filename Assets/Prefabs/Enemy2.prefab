@@ -151,8 +151,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b03705554bd3f8c4c87753d263757f6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointA: {x: 144, y: 0.8, z: 0}
-  pointB: {x: 170, y: 2, z: 0}
+  pointA: {x: 20, y: 0.8, z: 0}
+  pointB: {x: 40, y: 2, z: 0}
   speed: 0.2
   flapSound: {fileID: 8300000, guid: 55bf7e75150379b468653162a7eef33b, type: 3}
   flapInterval: 1.5
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60cef980da45280499d396e6ba1de3b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 4
+  maxHealth: 6
   currentHealth: 0
 --- !u!82 &4736580101765644071
 AudioSource:
@@ -241,7 +241,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 55bf7e75150379b468653162a7eef33b, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.264
   m_Pitch: 1
   Loop: 0
   Mute: 0
