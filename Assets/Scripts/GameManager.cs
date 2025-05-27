@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator LoadMainMenuAfterCinematic()
     {
-        yield return new WaitForSeconds(12f); // Cinematic scene duration
+        yield return new WaitForSeconds(13f); // Cinematic scene duration
         SceneManager.LoadScene("MainMenu");
     }
 
