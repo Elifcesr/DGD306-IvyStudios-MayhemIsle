@@ -157,6 +157,17 @@
                 },
                 {
                     "name": "",
+                    "id": "4006d0fa-99fb-4795-a95b-628fec104420",
+                    "path": "<Joystick>/stick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "11e05bab-1d32-4097-95e9-d8efa5290b55",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
@@ -170,6 +181,17 @@
                     "name": "",
                     "id": "bd785038-8806-4e50-a445-01dca625b46f",
                     "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "582b4d35-4f65-4c18-83c9-dfe5908780b0",
+                    "path": "<XInputController>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -198,6 +220,17 @@
                     "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c9f629c4-11b9-4e23-861a-a55af8f1bbe5",
+                    "path": "<XInputController>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
@@ -206,9 +239,18 @@
             "id": "2aecf825-597f-47c7-89c8-c40a43e7383b",
             "actions": [
                 {
-                    "name": "New action",
-                    "type": "Button",
+                    "name": "Navigate",
+                    "type": "Value",
                     "id": "935ec0c2-83bd-4ecd-b96a-2d6871309ee5",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Select",
+                    "type": "Button",
+                    "id": "9594869e-0828-4076-a130-6ce7cd09a746",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -223,7 +265,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "Navigate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1e20eccb-a056-46a7-8c2b-43943c14fb4b",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Select",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
