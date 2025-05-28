@@ -63,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Joystick1Button2)) && isGrounded)
         {
             isGrounded = false;
             rb2d.velocity = Vector2.up * jumpSpeed;
@@ -102,7 +102,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Attack()
     {
-        if (Input.GetMouseButtonDown(0)) // left click
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Joystick1Button0)) // left click
         {
             playerAnimator.SetTrigger("Sword");
         }

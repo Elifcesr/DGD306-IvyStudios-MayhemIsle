@@ -28,7 +28,7 @@ public class GameComplete : MonoBehaviour
     void Update()
     {
         // If it is possible to exit and any key was pressed
-        if (canExit && Input.anyKeyDown)
+        if (canExit && (Input.anyKeyDown || AnyJoystickButtonDown()))
         {
             // Switches to the main menu.
             SceneManager.LoadScene(mainMenuName);
@@ -49,5 +49,16 @@ public class GameComplete : MonoBehaviour
 
         // Sets canExit to true to enable exit.
         canExit = true;
+    }
+
+    bool AnyJoystickButtonDown()
+    {
+        for (int i = 0; i <= 19; i++)
+        {
+            if (Input.GetKeyDown((KeyCode)((int)KeyCode.JoystickButton0 + i)))
+                return true;
+        }
+
+        return false;
     }
 }

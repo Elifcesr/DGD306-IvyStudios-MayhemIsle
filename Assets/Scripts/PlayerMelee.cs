@@ -24,7 +24,7 @@ public class PlayerMelee : MonoBehaviour
     {
         if (cooldownTimer <= 0)
         {
-            if (Input.GetMouseButton(0)) // left click
+            if (Input.GetMouseButton(0) || Input.GetKey(KeyCode.Joystick1Button0)) // left click
             {
                 // play sound
                 if (slashSound != null && audioSource != null)

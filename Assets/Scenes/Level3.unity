@@ -2385,6 +2385,38 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 777284331140138293, guid: 6e3c8fdbb54cb1e469176e4f3e41e3f1, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 777284331140138293, guid: 6e3c8fdbb54cb1e469176e4f3e41e3f1, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.b
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 777284331140138293, guid: 6e3c8fdbb54cb1e469176e4f3e41e3f1, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.g
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 777284331140138293, guid: 6e3c8fdbb54cb1e469176e4f3e41e3f1, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725157526774057026, guid: 6e3c8fdbb54cb1e469176e4f3e41e3f1, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725157526774057026, guid: 6e3c8fdbb54cb1e469176e4f3e41e3f1, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.b
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725157526774057026, guid: 6e3c8fdbb54cb1e469176e4f3e41e3f1, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.g
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1725157526774057026, guid: 6e3c8fdbb54cb1e469176e4f3e41e3f1, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 1775012250318520924, guid: 6e3c8fdbb54cb1e469176e4f3e41e3f1, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -2485,6 +2517,11 @@ PrefabInstance:
 --- !u!1 &2069399552 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 198057006188971167, guid: 6e3c8fdbb54cb1e469176e4f3e41e3f1, type: 3}
+  m_PrefabInstance: {fileID: 2069399551}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2069399553 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6530158452998203287, guid: 6e3c8fdbb54cb1e469176e4f3e41e3f1, type: 3}
   m_PrefabInstance: {fileID: 2069399551}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &65741923975000855
@@ -3131,7 +3168,7 @@ MonoBehaviour:
   m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
-  m_DeselectOnBackgroundClick: 1
+  m_DeselectOnBackgroundClick: 0
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
   m_ScrollDeltaPerTick: 6
@@ -3162,7 +3199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 2069399553}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!1001 &7251503783086464307
