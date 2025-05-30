@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 6
-  jumpSpeed: 12
+  jumpSpeed: 9
   stopMovement: 0
   walkSound: {fileID: 8300000, guid: fa9b3519b8fbb004e80c0ab7625d6d1a, type: 3}
   jumpSound: {fileID: 8300000, guid: 624f0f230526bbc4297090ae52cda34c, type: 3}

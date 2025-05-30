@@ -139,10 +139,6 @@ PrefabInstance:
       value: Enemy (4)
       objectReference: {fileID: 0}
     - target: {fileID: 8607884519296828324, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
-      propertyPath: damage
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8607884519296828324, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 128558303}
@@ -206,10 +202,6 @@ PrefabInstance:
     - target: {fileID: 1005123691387017259, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: m_Name
       value: Enemy (7)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8607884519296828324, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
-      propertyPath: damage
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8607884519296828324, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: playerHealth
@@ -458,10 +450,6 @@ PrefabInstance:
     - target: {fileID: 1005123691387017259, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: m_Name
       value: Enemy (8)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8607884519296828324, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
-      propertyPath: damage
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8607884519296828324, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: playerHealth
@@ -1471,10 +1459,6 @@ PrefabInstance:
       value: Enemy (13)
       objectReference: {fileID: 0}
     - target: {fileID: 8607884519296828324, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
-      propertyPath: damage
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8607884519296828324, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 128558303}
@@ -1540,10 +1524,6 @@ PrefabInstance:
       value: Enemy (10)
       objectReference: {fileID: 0}
     - target: {fileID: 8607884519296828324, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
-      propertyPath: damage
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8607884519296828324, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 128558303}
@@ -1607,10 +1587,6 @@ PrefabInstance:
     - target: {fileID: 1005123691387017259, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: m_Name
       value: Enemy (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8607884519296828324, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
-      propertyPath: damage
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8607884519296828324, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: playerHealth
@@ -2043,10 +2019,6 @@ PrefabInstance:
       value: Enemy (16)
       objectReference: {fileID: 0}
     - target: {fileID: 8607884519296828324, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
-      propertyPath: damage
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8607884519296828324, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 128558303}
@@ -2110,10 +2082,6 @@ PrefabInstance:
     - target: {fileID: 1005123691387017259, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: m_Name
       value: Enemy (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8607884519296828324, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
-      propertyPath: damage
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8607884519296828324, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: playerHealth
@@ -2181,10 +2149,6 @@ PrefabInstance:
       value: Enemy (14)
       objectReference: {fileID: 0}
     - target: {fileID: 8607884519296828324, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
-      propertyPath: damage
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8607884519296828324, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 128558303}
@@ -2248,10 +2212,6 @@ PrefabInstance:
     - target: {fileID: 1005123691387017259, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: m_Name
       value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 8607884519296828324, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
-      propertyPath: damage
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8607884519296828324, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: playerHealth
@@ -2451,10 +2411,6 @@ PrefabInstance:
       value: Enemy (17)
       objectReference: {fileID: 0}
     - target: {fileID: 8607884519296828324, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
-      propertyPath: damage
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8607884519296828324, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 128558303}
@@ -2520,10 +2476,6 @@ PrefabInstance:
       value: Enemy (9)
       objectReference: {fileID: 0}
     - target: {fileID: 8607884519296828324, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
-      propertyPath: damage
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8607884519296828324, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 128558303}
@@ -2587,10 +2539,6 @@ PrefabInstance:
     - target: {fileID: 1005123691387017259, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: m_Name
       value: Enemy (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8607884519296828324, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
-      propertyPath: damage
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8607884519296828324, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: playerHealth
@@ -2718,10 +2666,6 @@ PrefabInstance:
     - target: {fileID: 1005123691387017259, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: m_Name
       value: Enemy (12)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8607884519296828324, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
-      propertyPath: damage
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8607884519296828324, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: playerHealth
@@ -3336,10 +3280,6 @@ PrefabInstance:
       value: Enemy (3)
       objectReference: {fileID: 0}
     - target: {fileID: 8607884519296828324, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
-      propertyPath: damage
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8607884519296828324, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 128558303}
@@ -3405,10 +3345,6 @@ PrefabInstance:
       value: Enemy (15)
       objectReference: {fileID: 0}
     - target: {fileID: 8607884519296828324, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
-      propertyPath: damage
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8607884519296828324, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 128558303}
@@ -3457,6 +3393,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
+--- !u!1 &2057494514
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2057494515}
+  m_Layer: 7
+  m_Name: BulletPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2057494515
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057494514}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.59, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2081573172386876958}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2084008386
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3531,10 +3498,6 @@ PrefabInstance:
       value: Enemy (5)
       objectReference: {fileID: 0}
     - target: {fileID: 8607884519296828324, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
-      propertyPath: damage
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8607884519296828324, guid: ec6261004a17d2e45bb384ccae3bb8a0, type: 3}
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 128558303}
@@ -3598,21 +3561,6 @@ MonoBehaviour:
   m_EffectColor: {r: 0.16470589, g: 0.16470589, b: 0.16470589, a: 1}
   m_EffectDistance: {x: 2, y: -2}
   m_UseGraphicAlpha: 1
---- !u!4 &541701059796811327
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7657198643031141762}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 342.9, y: -12, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2081573172386876958}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &654129484923794657
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3857,6 +3805,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 51aae0776a1dce24f805b7d0f5eac861, type: 3}
     - target: {fileID: 2861366632830540697, guid: 2de66c43970e602469356e188ca5b44b, type: 3}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2861366632830540697, guid: 2de66c43970e602469356e188ca5b44b, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
@@ -3922,7 +3874,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: e82e83ba4cf35294a89c432838965cea, type: 3}
     - target: {fileID: 9009008324267654806, guid: 2de66c43970e602469356e188ca5b44b, type: 3}
       propertyPath: m_SortingOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9009008324267654806, guid: 2de66c43970e602469356e188ca5b44b, type: 3}
       propertyPath: m_WasSpriteAssigned
@@ -3946,7 +3898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Bullet: {fileID: 6032594353447076154, guid: 7cec83e58e15ce44cbcf87e419fcb966, type: 3}
-  bulletPos: {fileID: 541701059796811327}
+  bulletPos: {fileID: 2057494515}
   shootSound: {fileID: 8300000, guid: 2a72e94f5dc02bf48be1f613469cf4e9, type: 3}
 --- !u!1 &1868702169297740165
 GameObject:
@@ -4002,7 +3954,7 @@ Transform:
   m_LocalScale: {x: 0.7468862, y: 0.7468862, z: 0.7468862}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 541701059796811327}
+  - {fileID: 2057494515}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2526580636078876857
@@ -4576,22 +4528,6 @@ MonoBehaviour:
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
   m_ScrollDeltaPerTick: 6
---- !u!1 &7657198643031141762
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 541701059796811327}
-  m_Layer: 7
-  m_Name: BulletPosition
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!114 &7681137377774719501
 MonoBehaviour:
   m_ObjectHideFlags: 0
