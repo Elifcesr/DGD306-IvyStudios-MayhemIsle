@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 6191930471225707302}
   - component: {fileID: 313859154409677188}
   - component: {fileID: -7364582221220461672}
+  - component: {fileID: -3980066892136834574}
   m_Layer: 7
   m_Name: Enemy3
   m_TagString: Enemy
@@ -34,8 +35,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 191.2, y: -0.6, z: 0}
-  m_LocalScale: {x: 0.7808, y: 0.7808, z: 0.7808}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.80000013, y: 0.80000013, z: 0.80000013}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2527293030198047161}
   - {fileID: 1177713377508507005}
@@ -61,7 +62,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: afe3a7e116a6854438008a4291a6473a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -214,6 +215,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 6
   currentHealth: 0
+  bloodEffectPrefab: {fileID: 8483378624717290519, guid: 1903f99da23206f40a0c5fd0ee869b95, type: 3}
   healthSlider: {fileID: 3683213580096174676}
 --- !u!114 &313859154409677188
 MonoBehaviour:
@@ -242,7 +244,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9103263fd6a117d4e892718fc4be444b, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.246
+  m_Volume: 0.358
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -326,6 +328,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-3980066892136834574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342612862599483519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7da230ec9c4bf144cb495263bd78640e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _flashColor: {r: 1, g: 0, b: 0, a: 1}
+  _flashTime: 0.5
 --- !u!1 &7420037596375183280
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,18 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI; 
+using UnityEngine.UI;
 
 public class EnemyHealth : MonoBehaviour
 {
     public int maxHealth = 3;
     public int currentHealth;
+    public GameObject bloodEffectPrefab; 
+
+    private DamageFlash _damageFlash;
 
     public Slider healthSlider; // slider
 
     void Start()
     {
         currentHealth = maxHealth;
+
+        _damageFlash = GetComponent<DamageFlash>();
 
         if (healthSlider != null)
         {
@@ -30,9 +35,21 @@ public class EnemyHealth : MonoBehaviour
             healthSlider.value = currentHealth;
         }
 
+        SpawnBloodEffect();
+
         if (currentHealth <= 0)
         {
             Die();
+        }
+
+        _damageFlash.CallDamageFlash();
+    }
+
+    void SpawnBloodEffect()
+    {
+        if (bloodEffectPrefab != null)
+        {
+            Instantiate(bloodEffectPrefab, transform.position, Quaternion.identity);
         }
     }
 

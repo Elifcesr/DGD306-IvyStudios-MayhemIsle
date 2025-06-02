@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 8981138808438143293}
   - component: {fileID: 3386681959619688304}
   - component: {fileID: 4736580101765644071}
+  - component: {fileID: 4058373987558183577}
   m_Layer: 7
   m_Name: Enemy2
   m_TagString: Enemy
@@ -34,7 +35,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 242.1, y: -0.1, z: 0}
-  m_LocalScale: {x: 1.1097654, y: 1.1097654, z: 1.1097654}
+  m_LocalScale: {x: 0.87, y: 0.87, z: 0.87}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2175369122527181255}
@@ -60,7 +61,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: afe3a7e116a6854438008a4291a6473a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -152,8 +153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b03705554bd3f8c4c87753d263757f6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointA: {x: 20, y: 0.8, z: 0}
-  pointB: {x: 40, y: 2, z: 0}
+  pointA: {x: 115, y: 0.8, z: 0}
+  pointB: {x: 135, y: 2, z: 0}
   speed: 0.2
   flapSound: {fileID: 8300000, guid: 55bf7e75150379b468653162a7eef33b, type: 3}
   flapInterval: 1.5
@@ -230,6 +231,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 6
   currentHealth: 0
+  bloodEffectPrefab: {fileID: 8483378624717290519, guid: 1903f99da23206f40a0c5fd0ee869b95, type: 3}
   healthSlider: {fileID: 4428451992595971822}
 --- !u!82 &4736580101765644071
 AudioSource:
@@ -327,6 +329,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4058373987558183577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565797852035050970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7da230ec9c4bf144cb495263bd78640e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _flashColor: {r: 1, g: 0, b: 0, a: 1}
+  _flashTime: 0.5
 --- !u!1001 &4144730098715303877
 PrefabInstance:
   m_ObjectHideFlags: 0

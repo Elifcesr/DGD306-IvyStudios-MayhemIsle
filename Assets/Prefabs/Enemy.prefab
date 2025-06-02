@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 8883497360115516577}
   - component: {fileID: 830391343785810220}
   - component: {fileID: 665421497052812949}
+  - component: {fileID: 2012237812837627881}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Enemy
@@ -60,7 +61,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: afe3a7e116a6854438008a4291a6473a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -213,6 +214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 4
   currentHealth: 0
+  bloodEffectPrefab: {fileID: 8483378624717290519, guid: 1903f99da23206f40a0c5fd0ee869b95, type: 3}
   healthSlider: {fileID: 8425120914494890944}
 --- !u!114 &830391343785810220
 MonoBehaviour:
@@ -230,8 +232,8 @@ MonoBehaviour:
   startDirection: {x: -1, y: 0}
   shouldChangeDirection: 0
   changeDirectionXPoint: -2
-  maxHealth: 2
-  currentHealth: 2
+  maxHealth: 4
+  currentHealth: 4
   damageAmount: 1
   changedDirection: {x: -0.5, y: -0.5}
   playerTransform: {fileID: 0}
@@ -333,6 +335,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2012237812837627881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005123691387017259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7da230ec9c4bf144cb495263bd78640e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _flashColor: {r: 1, g: 0, b: 0, a: 1}
+  _flashTime: 1
 --- !u!1001 &8078337716076970731
 PrefabInstance:
   m_ObjectHideFlags: 0
