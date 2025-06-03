@@ -437,7 +437,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 52, y: -216.4}
+  m_AnchoredPosition: {x: 52, y: -228.2}
   m_SizeDelta: {x: 1000, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &435174880
@@ -487,7 +487,7 @@ MonoBehaviour:
     Damage to Enemies\n\n\rUnityTutorial World - 2D Shooting in Unity || Aim at Mouse
     in Unity 2D (Shoot Weapon, Unity Tutorial for Beginners)\n\nMoreBBlakeyyy - 2D
     Enemy Shooting Unity Tutorial\n\nThe Dev Show - How to add multiple sound effects
-    in Unity "
+    in Unity \n\n\r\nSasquatch B Studios - Create A DAMAGE FLASH Effect for Sprites"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -916,14 +916,14 @@ RectTransform:
   m_GameObject: {fileID: 938915950}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.168, y: 0.237, z: 0.154}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.21, y: 0.29625002, z: 0.1925}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 509328033}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 72.7, y: -146.8419}
+  m_AnchoredPosition: {x: 93.2, y: -147.9}
   m_SizeDelta: {x: 1000, y: 47.1148}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &938915952
@@ -993,7 +993,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.2
+  m_fontSize: 18.55
   m_fontSizeBase: 29.4
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1029,7 +1029,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -18.183918, z: 771.7207, w: -17.928493}
+  m_margin: {x: 0, y: -18.183918, z: 771.7207, w: -19.456802}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1387,7 +1387,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 37.199986, y: -170.29999}
+  m_AnchoredPosition: {x: 37.199986, y: -176.19998}
   m_SizeDelta: {x: 1000, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1247883387
@@ -1597,7 +1597,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 53.6, y: -205.9}
+  m_AnchoredPosition: {x: 53.6, y: -217.7}
   m_SizeDelta: {x: 1000, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1528913998
@@ -1745,7 +1745,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 68.79999, y: -180.4}
+  m_AnchoredPosition: {x: 68.79999, y: -186.29999}
   m_SizeDelta: {x: 1000, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1613308725
@@ -1783,7 +1783,12 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Sound Design
 
-    Menu Design'
+    Menu Design
+
+    Arcade Deployment
+
+    Arcade System
+    Testing'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1810,7 +1815,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24.3
+  m_fontSize: 23.35
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1846,7 +1851,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -18.183918, z: 738.88916, w: 12.988487}
+  m_margin: {x: 0, y: -18.183918, z: 738.88916, w: -38.59055}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2012,7 +2017,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 37.199986, y: -136.8}
+  m_AnchoredPosition: {x: 37.199986, y: -135.9}
   m_SizeDelta: {x: 1000, y: 47.1148}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1986437136
@@ -2207,7 +2212,9 @@ MonoBehaviour:
     Concept Art
 
     Cinematic
-    Design'
+    Design
+
+    Arcade System Testing'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2234,7 +2241,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 22.45
+  m_fontSize: 21.9
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2270,7 +2277,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -18.183918, z: 780.81055, w: -60.434822}
+  m_margin: {x: 0, y: -18.183918, z: 738.66016, w: -82.21146}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

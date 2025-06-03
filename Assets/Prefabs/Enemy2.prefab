@@ -232,6 +232,8 @@ MonoBehaviour:
   maxHealth: 6
   currentHealth: 0
   bloodEffectPrefab: {fileID: 8483378624717290519, guid: 1903f99da23206f40a0c5fd0ee869b95, type: 3}
+  explosionEffectPrefab: {fileID: 8239383345972002677, guid: 2905cf8d22481794fad5403265ea158b, type: 3}
+  explosionSound: {fileID: 8300000, guid: 167bedc6725d1154b890738e2cbfc43a, type: 3}
   healthSlider: {fileID: 4428451992595971822}
 --- !u!82 &4736580101765644071
 AudioSource:

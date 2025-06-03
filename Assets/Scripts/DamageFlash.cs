@@ -43,7 +43,7 @@ public class DamageFlash : MonoBehaviour
             yield return null;
         }
 
-        SetFlashAmount(0f); // Efekti sýfýrla
+        SetFlashAmount(0f); 
     }
 
     private void SetFlashColor()
