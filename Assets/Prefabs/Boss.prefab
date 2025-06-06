@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 580439846023415722}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.59, y: 1.1, z: 0}
+  m_LocalPosition: {x: -3.59, y: 1.56, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -234,7 +234,6 @@ MonoBehaviour:
   currentHealth: 0
   bloodEffectPrefab: {fileID: 8483378624717290519, guid: 1903f99da23206f40a0c5fd0ee869b95, type: 3}
   explosionEffectPrefab: {fileID: 8239383345972002677, guid: 2905cf8d22481794fad5403265ea158b, type: 3}
-  explosionSound: {fileID: 8300000, guid: 167bedc6725d1154b890738e2cbfc43a, type: 3}
   healthSlider: {fileID: 3690459522931921539}
 --- !u!114 &7807665435920450820
 MonoBehaviour:
