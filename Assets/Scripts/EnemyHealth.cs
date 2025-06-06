@@ -10,10 +10,8 @@ public class EnemyHealth : MonoBehaviour
     public GameObject bloodEffectPrefab;
 
     public GameObject explosionEffectPrefab; // Explosion Effect
-    public AudioClip explosionSound;         // Explosion Sound
 
     private DamageFlash _damageFlash;
-    private AudioSource _audioSource;
 
     public Slider healthSlider; // slider
 
@@ -22,7 +20,6 @@ public class EnemyHealth : MonoBehaviour
         currentHealth = maxHealth;
 
         _damageFlash = GetComponent<DamageFlash>();
-        _audioSource = GetComponent<AudioSource>(); // AudioSource 
 
         if (healthSlider != null)
         {
@@ -64,12 +61,6 @@ public class EnemyHealth : MonoBehaviour
         if (explosionEffectPrefab != null)
         {
             Instantiate(explosionEffectPrefab, transform.position, Quaternion.identity);
-        }
-
-        // Explosion Sound
-        if (explosionSound != null && _audioSource != null)
-        {
-            _audioSource.PlayOneShot(explosionSound);
         }
 
         GameManager.instance.EnemyKilled();
